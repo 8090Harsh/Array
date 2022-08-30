@@ -1,0 +1,43 @@
+class ArrayRightSift 
+{
+    public static void main(String[] args)
+    {
+        int[] Oldar={1,2,1};
+        int[] newArray = getConcatenation(Oldar);
+        
+        PrintD(newArray);
+        
+    }
+       
+       
+      
+    public static int[] getConcatenation(int[] nums) {
+        int [] ans = new int[2*(nums.length)];
+        for(int i=0; i<nums.length; i++)
+        {
+            ans[i] = nums[i];
+            ans[i+nums.length] = nums[i];
+        }
+        return ans;
+        
+    }
+
+        
+        
+    
+        public static void PrintD(int[] arr)
+        {
+            for(int x : arr)
+            System.out.println(x+"");
+}
+    }
+
+
+
+java -cp /tmp/Vnif5doDSk ArrayRightSift
+1
+2
+1
+1
+2
+1
