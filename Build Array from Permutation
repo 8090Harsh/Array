@@ -1,0 +1,42 @@
+class ArrayRightSift 
+{
+    public static void main(String[] args)
+    {
+        int[] Oldar={0,2,1,5,3,4};
+        int[] newArray = buildArray(Oldar);
+        
+        PrintD(newArray);
+        
+    }
+         public static int[] buildArray(int[] nums) { 
+        int [] a = nums;
+        int [] b = new int[nums.length];
+        for(int i=0; i<nums.length; i++){
+        
+            b[i] = a[a[i]];
+          
+            
+        }
+        return b;
+    
+}
+        
+    
+        public static void PrintD(int[] arr)
+        {
+            for(int x : arr)
+            System.out.println(x+"");
+}
+    }
+
+
+
+
+
+java -cp /tmp/Vnif5doDSk ArrayRightSift
+01
+2
+4
+5
+3
+
