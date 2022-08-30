@@ -1,0 +1,38 @@
+class ArrayRightSift 
+{
+    public static void main(String[] args)
+    {
+        int[] Oldar={1,2,3,4};
+        int[] newArray = runningSum(Oldar);
+
+        PrintD(newArray);
+
+    }
+
+
+ public static  int[] runningSum(int[] nums) {
+int sum[]=new int[nums.length];
+sum[0]=nums[0];
+for(int i=1;i<nums.length;i++){
+sum[i]=sum[i-1]+nums[i];
+}
+return sum;
+}
+
+
+
+
+        public static void PrintD(int[] arr)
+        {
+            for(int x : arr)
+            System.out.println(x+"");
+}
+    }
+
+
+
+java -cp /tmp/l9dyVm4Jpl ArrayRightSift
+1
+3
+6
+10
