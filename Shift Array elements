@@ -1,0 +1,36 @@
+class ArrayRightSift 
+{
+    public static void main(String[] args)
+    {
+        int[] Oldar={5,3,7,9};
+        int[] newArray = ShiftArray(Oldar);
+        PrintD(newArray);
+        
+    }
+        public static int[] ShiftArray(int[] array1)
+        {
+            int[] array2 = new int[array1.length];
+            for(int i=0; i<array1.length-1; i++)
+            {
+                array2[i+1]  = array1[i];
+                
+            }
+            
+            array2[0] = array1[array1.length-1];
+            return array2;
+        }
+    
+        public static void PrintD(int[] arr)
+        {
+            for(int x : arr)
+            System.out.println(x+"");
+}
+    }
+
+
+
+java -cp /tmp/Vnif5doDSk ArrayRightSift
+9
+5
+3
+7
